@@ -16,7 +16,7 @@
       <td>
         <p class="license">This tutorial is for Processing's Python Mode.
         If you see any errors or have comments, please <a href=
-        "https://github.com/processing/processing-docs/issues?state=open">
+        "https://github.com/jdf/processing-py-site/issues?state=open">
         let us know</a>. This tutorial is adapted from the book, <a href=
         "http://www.processing.org/learning/books/#shiffman">Learning
         Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann
@@ -355,7 +355,7 @@ for x in xrange(img.width):
         b = blue(img.pixels[loc])
         
         # Change brightness according to the mouse here
-        adjustBrightness = ((float) mouseX / width) * 8.0
+        adjustBrightness = (float(mouseX) / width) * 8.0
         r *= adjustBrightness
         g *= adjustBrightness
         b *= adjustBrightness
@@ -615,7 +615,7 @@ def convolution(x, y, matrix, matrixsize, img):
             # Make sure we have not walked off the edge of the pixel array
             loc = constrain(loc,0,len(img.pixels)-1)
             # Calculate the convolution
-            # We sum all the neighboring pixels multiplied by the values in the convolution matrix.
+            # We sum all the neighboring pixels multiplied by the convolution matrix values.
             rtotal += (red(img.pixels[loc]) * matrix[i][j])
             gtotal += (green(img.pixels[loc]) * matrix[i][j])
             btotal += (blue(img.pixels[loc]) * matrix[i][j])
@@ -718,7 +718,7 @@ def draw():
 
 	<p>&nbsp;</p>
 
-<p class="license">This tutorial is for Python Mode of Processing version 2+. If you see any errors or have comments, please <a href="https://github.com/processing/processing-docs/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
+<p class="license">This tutorial is for Python Mode of Processing version 2+. If you see any errors or have comments, please <a href="https://github.com/jdf/processing-py-site/issues?state=open">let us know</a>. This tutorial is from the book, <a href="http://www.processing.org/learning/books/#shiffman">Learning Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann Publishers, Copyright &copy; 2008 Elsevier Inc. All rights reserved.</p>
 
 </td>
 	</tr>

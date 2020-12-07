@@ -16,7 +16,7 @@
       <td>
         <p class="license">This tutorial is for Processing's Python Mode.
         If you see any errors or have comments, please <a href=
-        "https://github.com/processing/processing-docs/issues?state=open">
+        "https://github.com/jdf/processing-py-site/issues?state=open">
         let us know</a>. This tutorial is adapted from the book, <a href=
         "http://www.processing.org/learning/books/#shiffman">Learning
         Processing</a>, by Daniel Shiffman, published by Morgan Kaufmann
@@ -139,10 +139,10 @@
             return newList
 
         def drawPoints(pointList):
-            for i in xrange(len(pointList)):
-                for j in xrange(len(pointList[0])):
-                    stroke(pointList[i][j])
-                    rect(i,j,10,10)
+            for y in xrange(len(pointList)):
+                for x in xrange(len(pointList[0])):
+                    stroke(pointList[y][x])
+                    rect(x,y,10,10)
         </pre>
         <br>
         <p>
@@ -155,7 +155,7 @@
       </p>
       <img src="imgs/cells.jpg">
       <pre>
-      <a href="http://www.learningprocessing.com/examples/chapter-13/example-13-10/">Example: 2D Array of Objects</a>
+      <a href="http://learningprocessing.com/examples/chp13/example-13-10-grid-cells">Example: 2D Array of Objects</a>
         # Number of columns and rows in the grid
         nCols = 10;
         nRows = 10;
@@ -183,7 +183,7 @@
         def makeGrid():
             global nCols, nRows
             grid = []
-            for i in xrange(nRows):
+            for i in xrange(nCols):
                 # Create an empty list for each row
                 grid.append([])
                 for j in xrange(nRows):
@@ -218,7 +218,7 @@
         <p class="license">This tutorial is for Python Mode in
         Processing 2+. If you see any errors or have comments,
         please <a href=
-        "https://github.com/processing/processing-docs/issues?state=open">
+        "https://github.com/jdf/processing-py-site/issues?state=open">
         let us know</a>. This tutorial is adapted from the book,
         <a href=
         "https://processing.org/books/#shiffman">Learning Processing</a> by Daniel Schiffman, 

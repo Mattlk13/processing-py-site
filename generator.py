@@ -42,13 +42,9 @@ to_skip_patterns = [
     r'^PShape.*',
     r'^PrintWriter.*',
     r'^Table.*',
-    r'^XML.*',
     r'^beginRecord',
     r'^endRecord',
-    r'^loadXML$',
-    r'^parseXML$',
     r'^loadTable$',
-    r'^saveXML$',
     r'^saveTable',
 ]
 
@@ -98,16 +94,7 @@ class ReferenceItem:
         if xml.find('usage') is not None:
             self.usage = self.get_element_text(xml.find('usage'))
 
-        
-        self.parameter = None
-        if xml.find('parameter') is not None:
-            self.parameter = self.get_element_text(xml.find('parameter'))
-
-
-        self.related = None
-        if xml.find('related') is not None:
-            self.parameter = self.get_element_text(xml.find('related'))
-    
+                  
         # We store plain xml-elements for some children so that we can use convert_hypertext on them at generation time.
         # This is necessary because all ReferenceItems have to be parsed before links can be resolved.
         self.examples = []
@@ -425,7 +412,7 @@ def build_reference_index(reference_dir, env):
         ('Typography', 'Loading & Displaying'),
         ('Typography', 'Attributes'),
         ('Typography', 'Metrics'),
-        ('Math', ''),
+        ('Math', 'PVector'),
         ('Math', 'Operators'),
         ('Math', 'Bitwise Operators'),
         ('Math', 'Calculation'),
